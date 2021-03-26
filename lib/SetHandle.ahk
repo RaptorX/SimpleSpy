@@ -1,6 +1,6 @@
 ﻿SetHandle(){
 	if(!Moving){
 		
-		t(A_ThisFunc)
+		tooltip % A_ThisFunc
 	}
 }

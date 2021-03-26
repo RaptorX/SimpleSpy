@@ -1,4 +1,4 @@
-﻿ShowFindDlg:
+ShowFindDlg:
 If (FindDlgExist) {
 	Gui Find: Show
 } Else {
@@ -173,9 +173,19 @@ MatchCriteria(Text, Class, Process) {
 
 FindOK:
 Gui ListView, %hFindList%
-LV_GetText(hWnd, LV_GetNext())
-GuiControl, 
-, EdtHandle, %hWnd%
+LV_GetText(hWnd, (row:=LV_GetNext()) ? row : 1)
+
+Gui, %hSpyWnd%:Default
+Ancestor:=GetAncestor(hWnd)
+WinGetTitle,Title,ahk_id%hWnd%
+ControlGetText,Text,,ahk_id%hWnd%
+WinGet,EXE,ProcessName,ahk_id%hWnd%
+WinGetClass,Class,ahk_id%hWnd%
+
+GuiControl,, EdtHandle, %hWnd%
+GuiControl,, EdtText, %Text%
+GuiControl,, EdtClass, % "Title " Title "`r`nahk_class " Class "`r`nahk_exe " EXE
+
 WinActivate ahk_id %hSpyWnd%
 Gui Find: Hide
 Return
