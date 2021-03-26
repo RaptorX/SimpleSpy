@@ -14,11 +14,6 @@ ListLines Off
 
 #include lib\ScriptObj\scriptobj.ahk
 
-; if !InStr(A_OSVersion, "10.")
-	; appdata := A_ScriptDir
-; else
-	; appdata := A_AppData "\" regexreplace(A_ScriptName, "\.\w+"), isWin10 := true
-
 global script := {base			: script
 				 ,name			: regexreplace(A_ScriptName, "\.\w+")
 				 ,version		: "1.0.0"
@@ -65,13 +60,13 @@ Global AppName := script.name " - https://the-automator.com"
 , g_TreeShowAll := False
 , g_Minimized
 , g_MouseCoordMode := "Screen"
-,ID
+, ID
 , g_DetectHidden
 , g_Minimize
 , g_AlwaysOnTop
-,MainWindow
-,ClassNNHWND
-,TextHWND,HWNDHWND,ParentHWND,TreeIDs:=[],ShowTreeHWND,WinHeight
+, MainWindow
+, ClassNNHWND
+, TextHWND,HWNDHWND,ParentHWND,TreeIDs:=[],ShowTreeHWND,WinHeight
 
 Menu, Tray, Add, % "Check for Updates", % "Update"
 Menu, Tray, Icon, % script.iconfile
