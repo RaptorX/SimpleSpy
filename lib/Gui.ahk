@@ -1,4 +1,4 @@
-﻿;CreateImageList()
+﻿CreateImageList()
 Width:=85,XPos:=115,WinHeight:=220
 ;~ Gui,New,LabelSpy hWndhSpyWnd
 Gui,+HWNDMainWindow +AlwaysOnTop
