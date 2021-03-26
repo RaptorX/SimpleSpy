@@ -68,6 +68,7 @@ Global AppName := script.name " - https://the-automator.com"
 , ClassNNHWND
 , TextHWND,HWNDHWND,ParentHWND,TreeIDs:=[],ShowTreeHWND,WinHeight
 
+;@Ahk2Exe-SetMainIcon res\WinSpy.ico
 Menu, Tray, NoStandard
 Menu, Tray, Icon, % script.iconfile
 Menu, Tray, Add, % "Check for Updates", % "Update"
