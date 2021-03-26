@@ -68,8 +68,13 @@ Global AppName := script.name " - https://the-automator.com"
 , ClassNNHWND
 , TextHWND,HWNDHWND,ParentHWND,TreeIDs:=[],ShowTreeHWND,WinHeight
 
-Menu, Tray, Add, % "Check for Updates", % "Update"
+Menu, Tray, NoStandard
 Menu, Tray, Icon, % script.iconfile
+Menu, Tray, Add, % "Check for Updates", % "Update"
+Menu, Tray, Add, % "About"
+Menu, Tray, Add
+Menu, Tray, Add, % "Reload"
+Menu, Tray, Add, % "Exit"
 
 #Include lib\Gui.ahk
 
@@ -81,15 +86,6 @@ return ; End of the auto-execute section
 GuiClose:
 ExitApp
 return
-
-update()
-{
-	try
-		script.update(false, false)
-	catch err
-		msgbox % err.code ": " err.msg
-	return
-}
 
 #Include lib\ShowBorder.ahk
 #Include lib\FindToolHandler.ahk
@@ -110,3 +106,4 @@ update()
 #Include lib\LButtonUp.ahk
 #Include lib\GetAncestor.ahk
 #Include lib\Control GetClassNN.ahk
+#Include lib\MenuFunctions.ahk
