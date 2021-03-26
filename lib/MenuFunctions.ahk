@@ -17,7 +17,8 @@ About()
 update()
 {
 	try
-		script.update(false, false)
+		script.update("https://raw.githubusercontent.com/RaptorX/SimpleSpy/master/ver"
+					 ,"https://github.com/RaptorX/SimpleSpy/archive/refs/tags/latest.zip")
 	catch err
 		msgbox % err.code ": " err.msg
 
