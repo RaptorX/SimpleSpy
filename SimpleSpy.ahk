@@ -16,7 +16,7 @@ ListLines Off
 
 global script := {base			: script
 				 ,name			: regexreplace(A_ScriptName, "\.\w+")
-				 ,version		: "1.2.0"
+				 ,version		: "1.2.2"
 				 ,author		: "Maestrith and Joe Glines"
 				 ,email			: "joe@the-automator.com"
 				 ,homepagetext	: "www.the-automator.com/snip"
@@ -68,6 +68,7 @@ Global AppName := script.name " - https://the-automator.com"
 , ClassNNHWND
 , TextHWND,HWNDHWND,ParentHWND,TreeIDs:=[],ShowTreeHWND,WinHeight
 
+;@Ahk2Exe-SetMainIcon res\WinSpy.ico
 Menu, Tray, NoStandard
 Menu, Tray, Icon, % script.iconfile
 Menu, Tray, Add, % "Check for Updates", % "Update"
