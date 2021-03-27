@@ -16,16 +16,16 @@ ListLines Off
 
 global script := {base			: script
 				 ,name			: regexreplace(A_ScriptName, "\.\w+")
-				 ,version		: "1.2.2"
+				 ,version		: "1.2.3"
 				 ,author		: "Maestrith and Joe Glines"
 				 ,email			: "joe@the-automator.com"
-				 ,homepagetext	: "www.the-automator.com/snip"
-				 ,homepagelink	: "www.the-automator.com/snip?src=app"
+				 ,homepagetext	: "www.the-automator.com/simplespy"
+				 ,homepagelink	: "www.the-automator.com/simplespy?src=app"
 				 ,resfolder		: A_ScriptDir "\res"
 				 ,iconfile		: A_ScriptDir "\res\WinSpy.ico"
 				 ,config 		: A_ScriptDir "\settings.ini"}
 
-Global AppName := script.name " - https://the-automator.com"
+Global AppName := script.name " - the-Automator.com"
 , IniFile := AppName . ".ini"
 , Moving
 , hFindTool
